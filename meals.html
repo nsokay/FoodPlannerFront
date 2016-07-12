@@ -5,15 +5,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src = "js/order.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/list.js"></script>
 </head>
 <body>
 
 
 
 <div class="container">
-    <h4>Welcome  , now you can choose your meal for today</h4>
+    <h4>Welcome {{firstName}} {{lastName}} , now you can choose your meal for today</h4>
     <h4>Current Date : </h4>
 
     <style>
@@ -56,7 +58,7 @@
             }
         </style>
     <span class="group-btn">
-                <button onclick="" type="button" class="btn btn-success btn-lg">Order</button>
+                <button onclick="submit()" type="button" class="btn btn-success btn-lg">Order</button>
     </span>
         </div>
 </div>
