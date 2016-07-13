@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,59 +9,98 @@
     <script src = "js/order.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/meal.js"></script>
+    <script src="vendor/handlebars.js"></script>
 </head>
 <body>
 
 
 
-<div class="container">
-    <h4>Welcome {{firstName}} {{lastName}} , now you can choose your meal for today</h4>
-    <h4>Current Date : </h4>
+<!--<div class="container">-->
+    <!--<h4>Welcome {{firstName}} {{lastName}} , now you can choose your meal for today</h4>-->
+    <!--<h4>Current Date : </h4>-->
 
-    <style>
-        h4 {
-            display: block;
-            font-size: .83em;
-            margin-top: 1.67em;
-            margin-bottom: 1.67em;
-            margin-left: 0;
-            margin-right: 0;
-            font-weight: bold;
-        }
-    </style>
+    <!--<style>-->
+        <!--h4 {-->
+            <!--display: block;-->
+            <!--font-size: .83em;-->
+            <!--margin-top: 1.67em;-->
+            <!--margin-bottom: 1.67em;-->
+            <!--margin-left: 0;-->
+            <!--margin-right: 0;-->
+            <!--font-weight: bold;-->
+        <!--}-->
+    <!--</style>-->
 
-    <h2>LIDO</h2>
-    <div class="list-group">
-        <a href="#" class="list-group-item">Supchshik s gorokhom + kompot</a>
-        <a href="#" class="list-group-item">Second item</a>
-        <a href="#" class="list-group-item">Third item</a>
-    </div>
 
-    <h2>Mc Donald's</h2>
-    <div class="list-group">
-        <a href="#" class="list-group-item">First item</a>
-        <a href="#" class="list-group-item">Second item</a>
-        <a href="#" class="list-group-item">Third item</a>
-    </div>
+    <!--<h2>LIDO</h2>-->
+    <!--<div class="list-group">-->
+        <!--<a href="#" class="list-group-item">Supchshik s gorokhom + kompot</a>-->
+        <!--<a href="#" class="list-group-item">Second item</a>-->
+        <!--<a href="#" class="list-group-item">Third item</a>-->
+    <!--</div>-->
 
-    <h2>Pusdienas.lv</h2>
-    <div class="list-group">
-        <a href="#" class="list-group-item">First item</a>
-        <a href="#" class="list-group-item">Second item</a>
-        <a href="#" class="list-group-item">Third item</a>
-    </div>
+    <!--<h2>Mc Donald's</h2>-->
+    <!--<div class="list-group">-->
+        <!--<a href="#" class="list-group-item">First item</a>-->
+        <!--<a href="#" class="list-group-item">Second item</a>-->
+        <!--<a href="#" class="list-group-item">Third item</a>-->
+    <!--</div>-->
 
-    <div class="button">
-        <style>
-            button {
-                float:right;
-            }
-        </style>
-    <span class="group-btn">
-                <button onclick="submit()" type="button" class="btn btn-success btn-lg">Order</button>
-    </span>
-        </div>
-</div>
+    <!--<h2>Pusdienas.lv</h2>-->
+    <!--<div class="list-group">-->
+        <!--<a href="#" class="list-group-item">First item</a>-->
+        <!--<a href="#" class="list-group-item">Second item</a>-->
+        <!--<a href="#" class="list-group-item">Third item</a>-->
+    <!--</div>-->
+
+    <!--<div class="button">-->
+        <!--<style>-->
+            <!--button {-->
+                <!--float:right;-->
+            <!--}-->
+        <!--</style>-->
+    <!--<span class="group-btn">-->
+                <!--<button onclick="submit()" type="button" class="btn btn-success btn-lg">Order</button>-->
+    <!--</span>-->
+        <!--</div>-->
+<!--</div>-->
 
 </body>
+    <script id="cafe-list" type="text/x-handlebars-template">
+        <div class="container">
+    <div class="cafe-list">
+        <h4>Welcome {{firstName}} {{lastName}} , now you can choose your meal for today</h4>
+        <h4>Current Date : </h4>
+
+        <style>
+            h4 {
+                display: block;
+                font-size: .83em;
+                margin-top: 1.67em;
+                margin-bottom: 1.67em;
+                margin-left: 0;
+                margin-right: 0;
+                font-weight: bold;
+            }
+        </style>
+    <div>
+    {{{body}}}
+    </div>
+    </div>
+            </div>
+</script>
+
+<script id="meals" type="text/x-handlebars-template">
+    <div class="meals">
+        <h2>{{cafeName}}</h2>
+        <div class="list-group">
+            <a href="#" class="list-group-item">First item</a>
+            <a href="#" class="list-group-item">Second item</a>
+            <a href="#" class="list-group-item">Third item</a>
+        </div>
+</div>
+    </div>
+</script>
+
 </html>
