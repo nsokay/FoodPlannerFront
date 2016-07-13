@@ -67,6 +67,7 @@
 <!--</div>-->
 
 </body>
+<div clas="container">
     <script id="cafe-list" type="text/x-handlebars-template">
         <div class="container">
     <div class="cafe-list">
@@ -88,19 +89,39 @@
     {{{body}}}
     </div>
     </div>
-            </div>
+      </div>
 </script>
 
 <script id="meals" type="text/x-handlebars-template">
     <div class="meals">
         <h2>{{cafeName}}</h2>
-        <div class="list-group">
-            <a href="#" class="list-group-item">First item</a>
-            <a href="#" class="list-group-item">Second item</a>
-            <a href="#" class="list-group-item">Third item</a>
+        <div class="mealList">
+            {{#each mealList}}
+            <div class="meal">
+                <div class="list-group">
+                    <span class="list-group-item">{{mealName}}</span>
+                    <style>
+                        .list-group{
+                            margin:0;
+                        }
+                    </style>
+                </div>
+            </div>
+            {{/each}}
         </div>
-</div>
     </div>
 </script>
+
+    <div class="button">
+        <style>
+            button {
+                float:right;
+            }
+        </style>
+    <span class="group-btn">
+                <button onclick="submit()" type="button" class="btn btn-success btn-lg">Order</button>
+    </span>
+    </div>
+</div>
 
 </html>
